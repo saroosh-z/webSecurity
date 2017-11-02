@@ -12,7 +12,7 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Tested in version: 4.2
     - Fixed in version: 4.6
   - [x] GIF Walkthrough: 
-    ``` https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS1_image.gif```
+    ![image] (https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS1_image.gif)
   - [x] Steps to recreate: 
          Create a new post on WP. Upload an image with the following name
           ``` animal<img src=a onerror=alert(1)>.png //animal is the filename```
@@ -25,7 +25,8 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.6
-  - [ ] GIF Walkthrough: 
+  - [X] GIF Walkthrough: 
+  - https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS2_embeddedLink.gif
   
   - [X] Steps to recreate: 
         Create a new page in WP and add the code in page's body. Code will be execcuted when page is rendered.
@@ -37,7 +38,8 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Vulnerability types: XSS
     - Tested in version:4.2
     - Fixed in version: 4.3
-  - [ ] GIF Walkthrough: 
+  - [X] GIF Walkthrough: 
+  - https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS3_onhover.gif
   - [X] Steps to recreate: 
       Create a new post and add the infected HTML code in the post. Following code will be evecuted when user will hover over the text
   ```[caption width="1.5" caption='<a href="' ">]</a><a href="http://onmouseover='alert('1')'">You have won!</a>```  
@@ -55,7 +57,7 @@ List any additional assets, such as scripts or files
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
 - [technet(https://technet.microsoft.com/en-us/library/cc512662.aspx)]
 
-GIFs created with [Peek]().
+GIFs created with [Peek](http://www.omgubuntu.co.uk/2016/08/peek-desktop-gif-screen-recorder-linux).
 
 ## Notes
 - this assignment was interesting!

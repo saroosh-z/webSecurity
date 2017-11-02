@@ -11,7 +11,8 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.6
-  - [ ] GIF Walkthrough: 
+  - [x] GIF Walkthrough: 
+     https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS1_image.gif
   - [x] Steps to recreate: 
          Create a new post on WP.Upload an image with the following name
           ``` animal<img src=a onerror=alert(1)>.png //animal is the filename```

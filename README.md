@@ -12,9 +12,8 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Tested in version: 4.2
     - Fixed in version: 4.6
   - [x] GIF Walkthrough: 
-    ![image] (https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS1_image.gif)
-  - [x] Steps to recreate: 
-         Create a new post on WP. Upload an image with the following name
+![xss1_image](https://user-images.githubusercontent.com/17416917/32330574-edd8f304-bfb6-11e7-8b72-1b14c02b1ba0.gif)  - [x]     - [X] Steps to recreate: 
+  - Create a new post on WP. Upload an image with the following name
           ``` animal<img src=a onerror=alert(1)>.png //animal is the filename```
   - [X] Affected source code:
   - [Link 1](http://wpdistillery.dev/wp-admin/upload.php?item=29)
@@ -26,24 +25,22 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Tested in version: 4.2
     - Fixed in version: 4.6
   - [X] GIF Walkthrough: 
-  - https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS2_embeddedLink.gif
-  
-  - [X] Steps to recreate: 
+![xss2_embeddedlink](https://user-images.githubusercontent.com/17416917/32330579-f0a7cde4-bfb6-11e7-9e45-f1e5537a41ce.gif)  - [X] Steps to recreate: 
         Create a new page in WP and add the code in page's body. Code will be execcuted when page is rendered.
     ```[embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]```
   - [x] Affected source code:
-    - [Link 1] (http://wpdistillery.dev/?page_id=43)
+    - [Link 1](http://wpdistillery.dev/?page_id=43)
+    
 3. (Required) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
   - [x] Summary: A vulnerability that allows attackers to add infected HTML elements/tags on the page. In this example, when user hovers over the infected HTML, an alert window appears.
     - Vulnerability types: XSS
     - Tested in version:4.2
     - Fixed in version: 4.3
   - [X] GIF Walkthrough: 
-  - https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS3_onhover.gif
-  - [X] Steps to recreate: 
+![xss3_onhover](https://user-images.githubusercontent.com/17416917/32330580-f24b83ac-bfb6-11e7-8dad-3ab8e28813d3.gif)  - [X]  - [X] Steps to recreate: 
       Create a new post and add the infected HTML code in the post. Following code will be evecuted when user will hover over the text
   ```[caption width="1.5" caption='<a href="' ">]</a><a href="http://onmouseover='alert('1')'">You have won!</a>```  
-  - [ ] Affected source code:
+  - [X] Affected source code:
   - [Link 1](http://wpdistillery.dev/?p=76)
 
 ## Assets
@@ -56,6 +53,7 @@ List any additional assets, such as scripts or files
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
 - [technet(https://technet.microsoft.com/en-us/library/cc512662.aspx)]
+- [How to preview gifs in readme](http://solutionoptimist.com/2013/12/28/awesome-github-tricks/_)
 
 GIFs created with [Peek](http://www.omgubuntu.co.uk/2016/08/peek-desktop-gif-screen-recorder-linux).
 

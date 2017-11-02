@@ -7,16 +7,14 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
 ## Pentesting Report
 
 1. (Required) WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
-  - [x] Summary: This vulnerability allows attackers to create an image filename that injects arbitary web web script. 
-  
+  - [x] Summary: This vulnerability allows attackers to create an image filename that injects arbitary web web script.   
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.6
   - [ ] GIF Walkthrough: 
-  
   - [x] Steps to recreate: 
-  Create a new post on WP.Upload an image with the following name
-  '''animal<img src=a onerror=alert(1)>.png //animal is the filename'''    
+         Create a new post on WP.Upload an image with the following name
+          ``` animal<img src=a onerror=alert(1)>.png //animal is the filename```
   - [ ] Affected source code:
   - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 2. (Required) WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
@@ -28,10 +26,8 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
   - [ ] GIF Walkthrough: 
   
   - [X] Steps to recreate: 
-  Create a new page in WP and add the code in page's body. Code will be execcuted when page is rendered.
-    ```
-    [embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]
-    ```
+        Create a new page in WP and add the code in page's body. Code will be execcuted when page is rendered.
+    ```[embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]```
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 3. (Required) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
@@ -41,29 +37,10 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
     - Fixed in version: 4.3
   - [ ] GIF Walkthrough: 
   - [X] Steps to recreate: 
-  Create a new post and add the infected HTML code in the post. Following code will be evecuted when user will hover over the text
-  '''[caption width="1.5" caption='<a href="' ">]</a><a href="http://onmouseover='alert('1')'">Over here!</a>'''
-  
+      Create a new post and add the infected HTML code in the post. Following code will be evecuted when user will hover over the text
+  ```[caption width="1.5" caption='<a href="' ">]</a><a href="http://onmouseover='alert('1')'">Over here!</a>```  
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+  - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 
 ## Assets
 
@@ -74,15 +51,14 @@ List any additional assets, such as scripts or files
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
 
-GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+GIFs created with [](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Saroosh Zaman]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

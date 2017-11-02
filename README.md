@@ -7,20 +7,21 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
 ## Pentesting Report
 
 1. (Required) WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
-  - [x] Summary: This vulnerability allows attackers to create an image filename that injects arbitary web web script.   
+  - [x] Summary: This vulnerability allows attackers to create an image with an infected filename.   
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.6
   - [x] GIF Walkthrough: 
-     https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS1_image.gif
+    ``` https://github.com/saroosh-z/webSecurity/blob/master/gifs/XSS1_image.gif```
   - [x] Steps to recreate: 
-         Create a new post on WP.Upload an image with the following name
+         Create a new post on WP. Upload an image with the following name
           ``` animal<img src=a onerror=alert(1)>.png //animal is the filename```
-  - [ ] Affected source code:
-  - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] Affected source code:
+  - [Link 1](http://wpdistillery.dev/wp-admin/upload.php?item=29)
+  
 2. (Required) WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [X] Summary: 
-    This vulnerablity allows remote attackers to inject arbitrary web script or HTML via video URL in YouTube emebeds.
+    This vulnerablity allows remote attackers to inject arbitrary web script or HTML via video URL in YouTube emebeds. infected code runs when the page is rendered.
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.6
@@ -29,33 +30,35 @@ For this project, I used XSS and creating alerts on mouseHover, on a pageLoad an
   - [X] Steps to recreate: 
         Create a new page in WP and add the code in page's body. Code will be execcuted when page is rendered.
     ```[embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]```
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [x] Affected source code:
+    - [Link 1] (http://wpdistillery.dev/?page_id=43)
 3. (Required) WordPress <= 4.3 - Authenticated Shortcode Tags Cross-Site Scripting (XSS)
-  - [x] Summary: A vulnerability that allows attackers to add HTML elements/tags
+  - [x] Summary: A vulnerability that allows attackers to add infected HTML elements/tags on the page. In this example, when user hovers over the infected HTML, an alert window appears.
     - Vulnerability types: XSS
     - Tested in version:4.2
     - Fixed in version: 4.3
   - [ ] GIF Walkthrough: 
   - [X] Steps to recreate: 
       Create a new post and add the infected HTML code in the post. Following code will be evecuted when user will hover over the text
-  ```[caption width="1.5" caption='<a href="' ">]</a><a href="http://onmouseover='alert('1')'">Over here!</a>```  
+  ```[caption width="1.5" caption='<a href="' ">]</a><a href="http://onmouseover='alert('1')'">You have won!</a>```  
   - [ ] Affected source code:
-  - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [Link 1](http://wpdistillery.dev/?p=76)
 
 ## Assets
 
 List any additional assets, such as scripts or files
+ - 3 gifs are added in the gifs folder
 
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
 - [WordPress Developer Reference](https://developer.wordpress.org/reference/)
+- [technet(https://technet.microsoft.com/en-us/library/cc512662.aspx)]
 
-GIFs created with [](http://www.cockos.com/licecap/).
+GIFs created with [Peek]().
 
 ## Notes
-
+- this assignment was interesting!
 
 ## License
 

@@ -20,15 +20,16 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ## Blue
 Vulnerability #1: * Insecure Direct Object Reference (IDOR)
+![IDOP](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/insecure_OR.gif)
 
-##add gif
 Vulnerability #2: * Session Hijacking/Fixation
+![session_hijack](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/sessionID.gif)
 
 
 
 ## Green
 Vulnerability #1: SQL Injection
-
+![sqli](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/sqlInjection.gif)
 
 Vulnerability #2: XSS
 
@@ -36,6 +37,7 @@ Vulnerability #2: XSS
 
 ## Red
 Vulnerability #1:  CSRF
+![csrf](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/csrf.gif)
 
 Vulnerability #2: Enumeration
 

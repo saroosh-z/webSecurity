@@ -32,6 +32,7 @@ Vulnerability #1: SQL Injection
 ![sqli](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/sqlInjection.gif)
 
 Vulnerability #2: XSS
+![xss](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/xss.gif)
 
 
 
@@ -40,10 +41,15 @@ Vulnerability #1:  CSRF
 ![csrf](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/csrf.gif)
 
 Vulnerability #2: Enumeration
+![enumeration](https://github.com/saroosh-z/webSecurity/blob/master/week8/gifs/userEnumeration.gif)
+
 
 ## Notes
 
 Describe any challenges encountered while doing the work
+session injection was the hardest one!
+IDOR was way easier that I expected. 
+CSRF was a good one to practice
 
 
 
